@@ -1,0 +1,10 @@
+
+<nav class="navbar">
+
+  @for (item of list; track item) {
+    <a href="#" [class.active]="item === 'Accueil'">
+      {{ item }}
+    </a>
+  }
+
+</nav>

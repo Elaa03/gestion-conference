@@ -1,0 +1,21 @@
+
+<div class="input">
+
+  <h2>Liste des amis</h2>
+
+  <div>
+    @for (item of friendsList; track item.email) {
+      <input
+        type="text"
+        [(ngModel)]="item.name"
+      />
+    }
+  </div>
+
+  <ul>
+    @for (item of friendsList; track item.email) {
+      <li>{{ item.name }}</li>
+    }
+  </ul>
+
+</div>
