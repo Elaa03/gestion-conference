@@ -1,30 +1,38 @@
-
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-notifications',
-  imports: [],
+  standalone: true,
   templateUrl: './notifications.html',
   styleUrl: './notifications.css',
 })
 export class Notifications {
 
   notifList = [
-    { id: 1, message: 'You have a new message' },
-    { id: 2, message: 'Your profile has been updated' },
-    { id: 3, message: 'You have a new friend request' }
+    {
+      id: 1,
+      message: 'Une nouvelle conférence est disponible.'
+    },
+    {
+      id: 2,
+      message: 'Votre profil a été mis à jour.'
+    },
+    {
+      id: 3,
+      message: 'Bienvenue sur Conference App !'
+    }
   ];
 
   show = false;
 
-  btnText = "Show Notifications";
+  get btnText(): string {
+    return this.show
+      ? 'Masquer les notifications'
+      : 'Afficher les notifications';
+  }
 
-  ShowNotifications() {
+  showNotifications(): void {
     this.show = !this.show;
-
-    this.btnText = this.show
-      ? "Hide Notifications"
-      : "Show Notifications";
   }
 
 }

@@ -1,0 +1,342 @@
+
+/* Section principale */
+.section-card {
+  background: white;
+  border-left: 5px solid var(--accent);
+  border-radius: 13px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 16px rgba(30, 55, 85, 0.08);
+}
+
+.section-body {
+  padding: 25px 22px;
+}
+
+/* En-tête */
+.conf-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.conf-header h2 {
+  margin: 0;
+  color: #1a3a63;
+  font-size: 1.35rem;
+}
+
+.hint {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
+
+/* Icône de la liste des conférences */
+.section-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--accent-soft);
+  color: var(--accent);
+
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Barre de recherche */
+.search {
+  width: 100%;
+  max-width: 540px;
+
+  padding: 14px 18px;
+
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-family: inherit;
+
+  margin-bottom: 18px;
+}
+
+.search:focus {
+  outline: none;
+  border-color: #0f766e;
+}
+
+/* Grille */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Carte conférence */
+.conf-card {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  padding: 22px;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.2s;
+}
+
+.conf-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.conf-card h3 {
+  margin: 0 0 16px;
+  color: #1a3a63;
+}
+
+.conf-card p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* Détails */
+.details {
+  margin-top: 15px;
+  padding-top: 14px;
+
+  border-top: 1px solid #e2e8f0;
+
+  color: #475569;
+  font-style: italic;
+}
+
+.details p {
+  font-style: normal;
+}
+
+/* Message vide */
+.empty {
+  color: #b91c1c;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+/* Bouton d'inscription */
+.btn {
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 20px;
+
+  color: #fff;
+
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+}
+
+/* Vert : plus de 10 places */
+.btn-available {
+  background: #15803d;
+}
+
+/* Orange : entre 1 et 10 places */
+.btn-low {
+  background: #d97706;
+}
+
+/* Rouge : complet */
+.btn-full {
+  background: #c62828;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+  .section-body {
+    padding: 20px 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .conf-header {
+    gap: 12px;
+  }
+
+}
+
+
+
+
+/* Section principale */
+.section-card {
+  background: white;
+  border-left: 5px solid var(--accent);
+  border-radius: 13px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 16px rgba(30, 55, 85, 0.08);
+}
+
+.section-body {
+  padding: 25px 22px;
+}
+
+/* En-tête */
+.conf-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.conf-header h2 {
+  margin: 0;
+  color: #1a3a63;
+  font-size: 1.35rem;
+}
+
+.hint {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
+
+/* Icône calendrier */
+.section-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--accent-soft);
+
+  font-size: 1.7rem;
+}
+
+/* Recherche */
+.search {
+  width: 100%;
+  max-width: 540px;
+
+  padding: 14px 18px;
+
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-family: inherit;
+
+  margin-bottom: 18px;
+}
+
+.search:focus {
+  outline: none;
+  border-color: #0f766e;
+}
+
+/* Grille */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Carte conférence */
+.conf-card {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  padding: 22px;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.conf-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.conf-card.selected {
+  border: 2px solid #0f766e;
+}
+
+.conf-card h3 {
+  margin: 0 0 16px;
+  color: #1a3a63;
+}
+
+.conf-card p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* Message vide */
+.empty {
+  color: #b91c1c;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+/* Boutons */
+.btn {
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 20px;
+
+  color: #fff;
+
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-available {
+  background: #15803d;
+}
+
+.btn-low {
+  background: #d97706;
+}
+
+.btn-full {
+  background: #c62828;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+  .section-body {
+    padding: 20px 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .conf-header {
+    gap: 12px;
+  }
+
+}

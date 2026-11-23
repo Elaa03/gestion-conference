@@ -1,0 +1,46 @@
+.panel {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 25px 22px;
+  margin-bottom: 15px;
+
+  background: white;
+  border-radius: 13px;
+
+  box-shadow: 0 3px 16px rgba(30, 55, 85, 0.08);
+}
+
+.profile-panel {
+  border-left: 5px solid #7aa8d8;
+}
+
+.panel-icon {
+  width: 54px;
+  height: 54px;
+
+  flex: 0 0 54px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 1.55rem;
+}
+
+.profile-icon {
+  background: #f0eaff;
+}
+
+.panel-content h2 {
+  margin: 0 0 14px;
+  color: #1d3859;
+  font-size: 1.35rem;
+}
+
+.panel-content p {
+  margin: 6px 0;
+  color: #35445a;
+}

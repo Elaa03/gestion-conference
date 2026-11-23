@@ -1,22 +1,42 @@
+<section class="panel notifications-panel" id="notifications">
 
-<div class="notifications">
+  <div class="panel-icon notification-icon">
+    🔔
+  </div>
 
-  <h3>Zone de notifications</h3>
+  <div class="panel-content">
 
-  <p>
-    Vous avez {{ notifList.length }} notifications.
-  </p>
+    <h2>Zone de notifications</h2>
 
-  <button (click)="ShowNotifications()">
-    {{ btnText }}
-  </button>
+    <p>
+      Vous avez
+      <strong>{{ notifList.length }}</strong>
+      nouvelles notifications.
+    </p>
 
-  @if (show) {
-    <ul>
-      @for (item of notifList; track item.id) {
-        <li>{{ item.message }}</li>
-      }
-    </ul>
-  }
+    <button
+      class="secondary-button"
+      type="button"
+      (click)="showNotifications()">
 
-</div>
+      {{ btnText }}
+
+    </button>
+
+    @if (show) {
+
+      <ul class="notification-list">
+
+        @for (item of notifList; track item.id) {
+
+          <li>{{ item.message }}</li>
+
+        }
+
+      </ul>
+
+    }
+
+  </div>
+
+</section>

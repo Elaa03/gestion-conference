@@ -1,10 +1,16 @@
-
 <nav class="navbar">
 
   @for (item of list; track item) {
-    <a href="#" [class.active]="item === 'Accueil'">
+
+    <button
+      type="button"
+      [class.active]="item === activeItem"
+      (click)="selectItem(item)">
+
       {{ item }}
-    </a>
+
+    </button>
+
   }
 
 </nav>

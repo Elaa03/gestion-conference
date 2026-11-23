@@ -1,0 +1,87 @@
+
+<section class="section-card details-section">
+
+  <div class="details-body">
+
+    <!-- En-tête -->
+    <div class="details-header">
+
+      <div class="details-icon">📋</div>
+
+      <div>
+        <h2>Détails de la conférence</h2>
+
+        <p class="details-hint">
+          Informations sur la conférence sélectionnée.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- Vérifier si une conférence est sélectionnée -->
+    @if (conference) {
+
+      <div class="details-content">
+
+        <h3>{{ conference.title }}</h3>
+
+        <p>
+          <strong>Description :</strong>
+          {{ conference.description }}
+        </p>
+
+        <p>
+          <strong>Date :</strong>
+          {{ conference.date | date:'dd/MM/yyyy' }}
+        </p>
+
+        <p>
+          <strong>Lieu :</strong>
+          {{ conference.place }}
+        </p>
+
+        <p>
+          <strong>Nombre de participants :</strong>
+          {{ conference.nbParticipants }}
+        </p>
+
+        <p>
+          <strong>Nombre maximum :</strong>
+          {{ conference.maxParticipants }}
+        </p>
+
+        <p>
+          <strong>Places restantes :</strong>
+          {{ conference.maxParticipants - conference.nbParticipants }}
+        </p>
+
+        <button
+          type="button"
+          class="btn-details"
+          [class.full]="remaining === 0"
+          [disabled]="remaining === 0"
+          (click)="register()"
+        >
+          @if (remaining === 0) {
+            Complet
+          } @else {
+            S'inscrire
+          }
+        </button>
+
+      </div>
+
+    }
+
+    @else {
+
+      <p class="empty-details">
+        Veuillez sélectionner une conférence pour afficher ses détails.
+      </p>
+
+    }
+
+  </div>
+
+</section>

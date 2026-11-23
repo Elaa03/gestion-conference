@@ -1,10 +1,108 @@
-.inputs {
+
+/* Conteneur principal */
+.panel {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 25px 22px;
+  margin-bottom: 15px;
+
+  background: white;
+  border-radius: 13px;
+
+  box-shadow: 0 3px 16px rgba(30, 55, 85, 0.08);
+}
+
+/* Bordure verte */
+.friends-panel {
+  border-left: 5px solid #5ab89a;
+}
+
+/* Icône */
+.panel-icon {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 1.55rem;
+}
+
+.friends-icon {
+  background: #e5f7f0;
+}
+
+/* Contenu */
+.panel-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.friends-content h2 {
+  margin: 0 0 14px;
+  color: #1d3859;
+  font-size: 1.35rem;
+}
+
+/* Champs de saisie */
+.friend-inputs {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 10px;
 }
- 
-.inputs input {
-  width: 200px;
-  padding: 3px 4px;
+
+.friend-inputs input {
+  width: 180px;
+  padding: 10px 12px;
+
+  border: 1px solid #d4dce6;
+  border-radius: 7px;
+
+  font: inherit;
+  color: #34445a;
+
+  outline: none;
+}
+
+.friend-inputs input:focus {
+  border-color: #4384d1;
+  box-shadow: 0 0 0 3px rgba(67, 132, 209, 0.12);
+}
+
+/* Liste des amis */
+.friends-content ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin: 15px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.friends-content li {
+  padding: 8px 14px;
+
+  background: #f0f8f5;
+  border-radius: 7px;
+
+  color: #315d4d;
+  font-weight: 500;
+}
+
+@media (max-width: 520px) {
+  .panel {
+    gap: 13px;
+    padding: 20px 14px;
+  }
+
+  .friend-inputs input {
+    width: 100%;
+  }
 }
